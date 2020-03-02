@@ -258,7 +258,7 @@ class Redirects extends Component
                 }
             }
             // Sanitize the URL
-            $dest = filter_var($dest, FILTER_SANITIZE_URL);
+            $dest = filter_var($dest, FILTER_SANITIZE_STRING);
             // Redirect the request away;
             $response->redirect($dest, $status)->send();
             try {
